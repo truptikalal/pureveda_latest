@@ -1,0 +1,243 @@
+body {
+    margin: 0%;
+    padding: 0%;
+                    
+    font-family: Arial, sans-serif;
+    background-color: #f6e7e8;
+    /*Pink background matching logo */
+
+
+}
+
+footer {
+    display: flex;
+                    flex-direction: column;
+                    line-height: 1.6;
+                    box-sizing: border-box;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px 40px 80px;
+    background-color: #fceaea;
+    /* Background color matching logo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 600px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+}
+
+.logo img {
+    height: 120px;
+    width: 120px;
+}
+
+
+.categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #045943;
+    /* Green color matching logo */
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.categories a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+.categories a:hover {
+    color: #038f5b;
+    /* Slightly brighter green */
+}
+
+.categories a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #038f5b;
+    /* Green hover underline */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.categories a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 40px;
+}
+
+.search-bar i {
+    font-size: 30px;
+    color: #045943;
+    /* Black color for search icon */
+    cursor: pointer;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 30px;
+    /* Increase spacing between buttons */
+}
+
+.auth-buttons button {
+    /* padding: 10px 20px; */
+    font-size: 16px;
+    color: #fff;
+    background-color: #045943;
+    /* Green color matching logo */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-buttons button:hover {
+    background-color: #038f5b;
+    /* Slightly brighter green */
+}
+
+.search-input {
+    display: none;
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fceaea;
+}
+
+
+
+
+.cart {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon {
+    font-size: 20px;
+    color: #fff;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: rgba(23, 47, 132, 0.847);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-details {
+    margin-top: 30px;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* .btn-custom {
+    background-color: #28a745;
+    color: white;
+}
+.btn-custom:hover {
+    background-color: #045943;
+} */
+
+
+/* Base style for the logout button */
+.logout-button {
+    background-color: #045943;
+    /* Default color */
+    color: white;
+    /* Text color */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect */
+.logout-button:hover {
+    background-color: red;
+    /* Hover color */
+    transform: scale(1.1);
+    /* Slight zoom-in effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Active effect */
+.logout-button:active {
+    transform: scale(0.95);
+    /* Slight press-down effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.cartlogout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.cartlogout a {
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+/* .navbar-nav {
+    padding-left: 40px;
+
+} */
