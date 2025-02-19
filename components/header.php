@@ -11,13 +11,13 @@
 
    <!-- Categories Section -->
    <nav class="categories">
-      <!-- <a href="#home">Home</a> -->
-      <a href="index.php">Home</a>
-      <a href="#hair">Hair</a>
-      <a href="#skincare">Skincare</a>
-      <a href="#Body">Body</a>
-      <a href="#Candles">Candles</a>
-   </nav>
+      <!-- Categories Section -->
+   <a href="index.php">Home</a>
+   <a href="#" class="category-btn" data-category="1">Hair</a>
+   <a href="#" class="category-btn" data-category="2">Skincare</a>
+   <a href="#" class="category-btn" data-category="3">Body</a>
+   <a href="#" class="category-btn" data-category="4">Candles</a>
+ </nav>
 
    <!-- Navigation items -->
    <section class="items">

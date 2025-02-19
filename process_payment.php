@@ -32,8 +32,18 @@ try {
     $stmt->execute();
     $stmt->close();
 
-    // Redirect to success page
-    header("Location: payment_success.php");
+    // Clear the cart after successful payment
+    $uid = $_SESSION['user_id'];
+    $stmt = $conn->prepare("DELETE FROM cart WHERE user_id = ?");
+    $stmt->bind_param("i", $uid);
+    $stmt->execute();
+    $stmt->close();
+
+    // Set success message
+    $_SESSION['message'] = "Your order has been placed successfully!";
+
+    // Redirect to home page
+    header("Location: index.php");
     exit();
 } catch (Exception $e) {
     die('Payment verification failed: ' . $e->getMessage());

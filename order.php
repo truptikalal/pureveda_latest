@@ -58,4 +58,30 @@ echo "<script>alert('Your order has been placed successfully!');</script>";
 echo "<script>window.location.href='index.php';</script>";
 exit;
 
+//insert the correct payment method
+$payment_method = isset($_POST['razorpay_payment_id']) ? 'Online' : 'COD';
+
+$query = "INSERT INTO orders (order_id, user_id, product_id, amount, status, payment_method, razorpay_payment_id) 
+          VALUES (?, ?, ?, ?, ?, ?, ?)";
+$stmt = $conn->prepare($query);
+$stmt->bind_param("iiidsss", $order_id, $user_id, $product_id, $amount, $status, $payment_method, $razorpay_payment_id);
+$stmt->execute();
+
+// show the payment method
+$query = "SELECT * FROM orders WHERE user_id = ?";
+$stmt = $conn->prepare($query);
+$stmt->bind_param("i", $_SESSION['user_id']);
+$stmt->execute();
+$result = $stmt->get_result();
+
+while ($order = $result->fetch_assoc()) {
+    echo "<tr>";
+    echo "<td>" . $order['order_id'] . "</td>";
+    echo "<td>" . $order['product_id'] . "</td>";
+    echo "<td>" . $order['amount'] . "</td>";
+    echo "<td>" . $order['status'] . "</td>";
+    echo "<td>" . $order['payment_method'] . "</td>"; // Show Payment Method
+    echo "</tr>";
+}
+
 ?>
