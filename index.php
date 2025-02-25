@@ -31,7 +31,7 @@
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title"><?= $product['name']; ?></h5>
                         <p class="card-text flex-grow-1"><?= substr($product['description'], 0, 100); ?>...</p>
-                        <h6>$<?= number_format($product['price'], 2); ?></h6>
+                        <h6>₹<?= number_format($product['price'], 2); ?></h6>
                         <a href="product.php?product_id=<?= $product['product_id']; ?>" class="btn btn-primary mt-auto">View Product</a>
                     </div>
                 </div>
